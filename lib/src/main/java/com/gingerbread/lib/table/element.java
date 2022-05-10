@@ -1,8 +1,6 @@
 package com.gingerbread.lib.table;
 
-import com.gingerbread.lib.element;
-
-public class baseElement implements element {
+public class element implements com.gingerbread.lib.element {
     private int numberAtomic;
     private String symbol;
     private String name;
@@ -14,6 +12,34 @@ public class baseElement implements element {
     private boolean transitionMetal;
     private boolean lanthanide;
     private boolean actinide;
+
+    public element(int numberAtomic, String symbol, String name, String description, boolean metal, boolean nonmetal, boolean halogen, boolean nobleGas, boolean transitionMetal, boolean lanthanide, boolean actinide) {
+        this.numberAtomic = numberAtomic;
+        this.symbol = symbol;
+        this.name = name;
+        this.description = description;
+        this.metal = metal;
+        this.nonmetal = nonmetal;
+        this.halogen = halogen;
+        this.nobleGas = nobleGas;
+        this.transitionMetal = transitionMetal;
+        this.lanthanide = lanthanide;
+        this.actinide = actinide;
+    }
+
+    public element() {
+        this.numberAtomic = 0;
+        this.symbol = "";
+        this.name = "";
+        this.description = "";
+        this.metal = false;
+        this.nonmetal = false;
+        this.halogen = false;
+        this.nobleGas = false;
+        this.transitionMetal = false;
+        this.lanthanide = false;
+        this.actinide = false;
+    }
 
     @Override
     public int getNumberAtomic() {

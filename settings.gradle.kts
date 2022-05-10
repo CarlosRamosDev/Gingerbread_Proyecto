@@ -5,6 +5,5 @@ dependencyResolutionManagement {
         gradlePluginPortal()
     }
 }
-include("app");
-include("lib");
+include("app", "lib");
 
