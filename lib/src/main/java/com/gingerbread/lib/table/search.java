@@ -2,7 +2,12 @@ package com.gingerbread.lib.table;
 
 public class search {
     public static element searchElementByNumberAtomic(int numberAtomic) {
-        return list.getElements()[numberAtomic - 1];
+        if ((numberAtomic > 0) && (numberAtomic <= 118)) {
+            return list.getElements()[numberAtomic - 1];
+        } else {
+            System.out.println("Debug: Element not found");
+            return null;
+        }
     }
 
     public static element searchElementBySimbol(String symbol) {
@@ -11,6 +16,7 @@ public class search {
                 return element;
             }
         }
+        System.out.println("Debug: Element not found");
         return null;
     }
 
@@ -20,6 +26,7 @@ public class search {
                 return element;
             }
         }
+        System.out.println("Debug: Element not found");
         return null;
     }
 }

@@ -5,9 +5,9 @@ import com.gingerbread.lib.table.element;
 public class H extends element {
 
     public H() {
-        super.setNumberAtomic(0);
-        super.setName("");
-        super.setSymbol("");
+        super.setNumberAtomic(1);
+        super.setName("Hidrogeno");
+        super.setSymbol("H");
         super.setDescription("");
         super.setMetal(false);
         super.setNonmetal(false);

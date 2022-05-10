@@ -4,9 +4,9 @@ import com.gingerbread.lib.table.element;
 
 public class He extends element {
     public He() {
-        super.setNumberAtomic(0);
-        super.setName("");
-        super.setSymbol("");
+        super.setNumberAtomic(2);
+        super.setName("Helio");
+        super.setSymbol("He");
         super.setDescription("");
         super.setMetal(false);
         super.setNonmetal(false);
