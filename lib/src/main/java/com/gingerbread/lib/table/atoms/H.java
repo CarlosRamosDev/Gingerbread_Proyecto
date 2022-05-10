@@ -5,6 +5,16 @@ import com.gingerbread.lib.table.element;
 public class H extends element {
 
     public H() {
-        super(1, "H", "Hydrogen", "A light, nonmetal element", false, true, false, false, false, false, false);
+        super.setNumberAtomic(0);
+        super.setName("");
+        super.setSymbol("");
+        super.setDescription("");
+        super.setMetal(false);
+        super.setNonmetal(false);
+        super.setHalogen(false);
+        super.setNobleGas(false);
+        super.setTransitionMetal(false);
+        super.setLanthanide(false);
+        super.setActinide(false);
     }
 }

@@ -2,8 +2,8 @@ package com.gingerbread.lib.table.atoms;
 
 import com.gingerbread.lib.table.element;
 
-public class He extends element {
-    public He() {
+public class Li extends element {
+    public Li() {
         super.setNumberAtomic(0);
         super.setName("");
         super.setSymbol("");
@@ -16,5 +16,4 @@ public class He extends element {
         super.setLanthanide(false);
         super.setActinide(false);
     }
-
 }
