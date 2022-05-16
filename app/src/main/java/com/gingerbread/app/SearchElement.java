@@ -1,6 +1,10 @@
 package com.gingerbread.app;
 
+import com.gingerbread.lib.table.element;
+
 import java.util.Scanner;
+
+import static com.gingerbread.lib.table.search.searchElementByNumberAtomic;
 
 public class SearchElement {
     public static void mainPage(Scanner scanner) {
@@ -14,7 +18,8 @@ public class SearchElement {
         if (option == 1) {
             System.out.println("Introduzca el número atómico del elemento:");
             int atomicNumber = inputs.inputIntByRange(scanner, 1, 118);
-            System.out.println(atomicNumber);
+            element element = searchElementByNumberAtomic(atomicNumber);
+            System.out.println(element);
         } else if (option == 2) {
             System.out.println("Introduzca el símbolo del elemento:");
             String symbol = scanner.nextLine();
