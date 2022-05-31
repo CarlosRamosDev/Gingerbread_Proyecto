@@ -1,6 +1,6 @@
 package com.gingerbread.app;
 
-public class Debug {
+public class Commons {
     static boolean debug = true;
 
     public static void debug(String message) {

@@ -1,5 +1,4 @@
 package com.gingerbread.app;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -19,10 +18,10 @@ public class inputs {
                 }
                 valid = false;                                                                                          // If the number is valid, set valid to false
             } catch (ArithmeticException e) {
-                Debug.debug(number + " is not between " + min + " and " + max);                                         // Debug message
+                Commons.debug(number + " is not between " + min + " and " + max);                                         // Debug message
                 System.out.println(e.getMessage());
             } catch (InputMismatchException e) {
-                Debug.debug("A non-numeric value was entered");                                                         // Debug message
+                Commons.debug("A non-numeric value was entered");                                                         // Debug message
                 System.out.println("Debes introducir un número entero");
                 input.nextLine();
             }
