@@ -1,5 +1,47 @@
 package com.gingerbread.lib.periodic_table;
 
+interface element {
+    int getNumberAtomic() throws Exception;
+
+    void setNumberAtomic(int numberAtomic) throws Exception;
+
+    String getSymbol() throws Exception;
+
+    void setSymbol(String symbol) throws Exception;
+
+    String getName() throws Exception;
+
+    void setName(String name) throws Exception;
+
+    boolean isMetal();
+
+    void setMetal(boolean metal);
+
+    boolean isNonmetal();
+
+    void setNonmetal(boolean nonmetal);
+
+    boolean isHalogen();
+
+    void setHalogen(boolean halogen);
+
+    boolean isNobleGas();
+
+    void setNobleGas(boolean nobleGas);
+
+    boolean isTransitionMetal();
+
+    void setTransitionMetal(boolean transitionMetal);
+
+    boolean isLanthanide();
+
+    void setLanthanide(boolean lanthanide);
+
+    boolean isActinide();
+
+    void setActinide(boolean actinide);
+}
+
 public class atom implements element {
     private int numberAtomic;
     private String symbol;
@@ -158,27 +200,4 @@ public class atom implements element {
     public void setActinide(boolean actinide) {
         this.actinide = actinide;
     }
-}
-
-interface element {
-    int getNumberAtomic() throws Exception;
-    void setNumberAtomic(int numberAtomic) throws Exception;
-    String getSymbol() throws Exception;
-    void setSymbol(String symbol) throws Exception;
-    String getName() throws Exception;
-    void setName(String name) throws Exception;
-    boolean isMetal();
-    void setMetal(boolean metal);
-    boolean isNonmetal();
-    void setNonmetal(boolean nonmetal);
-    boolean isHalogen();
-    void setHalogen(boolean halogen);
-    boolean isNobleGas();
-    void setNobleGas(boolean nobleGas);
-    boolean isTransitionMetal();
-    void setTransitionMetal(boolean transitionMetal);
-    boolean isLanthanide();
-    void setLanthanide(boolean lanthanide);
-    boolean isActinide();
-    void setActinide(boolean actinide);
 }

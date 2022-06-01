@@ -1,8 +1,5 @@
 package com.gingerbread.app;
 
-import com.gingerbread.lib.periodic_table.atom;
-
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
