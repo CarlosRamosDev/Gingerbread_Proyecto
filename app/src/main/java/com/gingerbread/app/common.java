@@ -28,10 +28,7 @@ public class common {
     }
 
     public static void copyrightAndAuthor(Scanner scanner) {
-        System.out.println("------------------------------------------------------");
-        System.out.println(copyright);
-        printAuthors();
-        System.out.println("------------------------------------------------------");
+        copyrightAndAuthor();
         System.out.print("Presione enter para continuar...");
         scanner.nextLine();
         scanner.nextLine();
