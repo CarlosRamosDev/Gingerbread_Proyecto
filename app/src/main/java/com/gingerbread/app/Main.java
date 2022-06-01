@@ -15,10 +15,8 @@ public class Main {
         do {
             printOptions();
             switch (inputs.inputIntByRange(scanner, 1, 10)) {
-                case 1 -> {
-                    SearchElement.mainPage(scanner);
-                }
-                case 9 -> common.copyrightAndAuthor();
+                case 1 -> SearchElement.mainPage(scanner);
+                case 9 -> common.copyrightAndAuthor(scanner);
                 case 10 -> exit = true;
                 default -> System.out.println("Próximamente");
             }
