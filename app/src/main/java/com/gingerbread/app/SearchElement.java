@@ -28,7 +28,7 @@ public class SearchElement {
         try {
             scanner.nextLine();
             atom atom = getByName(scanner.nextLine());
-            System.out.println("Se encontró el elemento " + atom.getName() + " con el número atómico " + atom.getNumberAtomic() + " y el símbolo " + atom.getSymbol());
+            System.out.println(getResult(atom));
             common.pause(scanner, 1);
         } catch (Exception e) {
             Debug.printError(e);
@@ -40,7 +40,7 @@ public class SearchElement {
         try {
             scanner.nextLine();
             atom atom = getBySymbol(scanner.nextLine());
-            System.out.println("Se encontró el elemento " + atom.getName() + " con el número atómico " + atom.getNumberAtomic() + " y el símbolo " + atom.getSymbol());
+            System.out.println(getResult(atom));
             common.pause(scanner, 1);
         } catch (Exception e) {
             Debug.printError(e);
@@ -52,10 +52,20 @@ public class SearchElement {
         int atomicNumber = inputs.inputIntByRange(scanner, 1, 118);
         try {
             atom atom = getByNumberAtomic(atomicNumber);
-            System.out.println("Se encontró el elemento " + atom.getName() + " con el número atómico " + atom.getNumberAtomic() + " y el símbolo " + atom.getSymbol());
+            System.out.println(getResult(atom));
             common.pause(scanner, 2);
         } catch (Exception e) {
             Debug.printError(e);
         }
+    }
+
+    public static String getResult(atom atom) throws Exception {
+        String margin = " ";
+        String header = "--- Resultado de la búsqueda ---\n";
+        String name = margin + "Nombre: " + atom.getName() + "\n";
+        String symbol = margin + "Símbolo: " + atom.getSymbol() + "\n";
+        String numberAtomic = margin + "Número atómico: " + atom.getNumberAtomic() + "\n";
+        String bottom = "--------------------------------";
+        return header+ name + symbol + numberAtomic + bottom;
     }
 }
