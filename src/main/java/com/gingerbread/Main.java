@@ -7,13 +7,16 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
         do {
-            switch (Integer.parseInt(Menus.getMainMenu().printMenu(scanner))) {
-                case 1 -> {
-                    Menus.getMainMenu().printMenu(scanner);
+            try {
+                switch (Integer.parseInt(Menus.getMainMenu().printMenu(scanner))) {
+                    case 8 -> Menus.getCreditsMenu().printMenu(scanner);
+                    case 9 -> exit = true;
+                    default -> throw new Exception("Opción no válida");
                 }
-
-                case 8 -> Menus.getCreditsMenu().printMenu(scanner);
-                case 9 -> exit = true;
+            } catch (NumberFormatException e) {
+                System.out.println("Error: Introduce un número entero como opción");
+            } catch (Exception e) {
+                System.out.println("Error: " + e.getMessage());
             }
         } while (!exit);
         String a = Menus.getMainMenu().printMenu(scanner);
