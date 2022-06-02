@@ -27,7 +27,6 @@ public class Menus {
         Menu menu = new Menu();
         menu.setTitle("Créditos");
         String credits = copyright + "\n" + """
-                Esta es una versión de trabajo en progreso, puede ser inestable.
                 -----------------------------------------------------------------
                 Diego Gael Martin del Campo
                 Carlos Iram Ramos Vasquez

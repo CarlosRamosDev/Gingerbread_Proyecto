@@ -10,6 +10,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String name, password;
         boolean authenticated;
+        System.out.println("-------------------- Work In Progress (WIP) --------------------");
+        System.out.println(Menus.copyright);
         System.out.println("Bienvenido, por favor ingrese su nombre de usuario y contraseña");
         do {
             System.out.print("Nombre de usuario: ");
