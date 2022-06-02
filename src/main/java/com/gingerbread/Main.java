@@ -19,8 +19,6 @@ public class Main {
                 System.out.println("Error: " + e.getMessage());
             }
         } while (!exit);
-        String a = Menus.getMainMenu().printMenu(scanner);
-        System.out.println(a);
-        System.out.println("Hello world!");
+        System.out.println("Hasta pronto!");
     }
 }
