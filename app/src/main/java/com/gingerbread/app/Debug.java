@@ -1,5 +1,7 @@
 package com.gingerbread.app;
-
+/**
+ * @author Carlos Ramos;
+ */
 public class Debug {
     static boolean debug = true;
 

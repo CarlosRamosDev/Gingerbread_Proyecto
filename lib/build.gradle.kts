@@ -9,3 +9,7 @@ dependencies {
 tasks.test {
     //useJUnitPlatform()
 }
+
+tasks.compileJava {
+    options.encoding = "UTF-8"
+}

@@ -1,19 +1,24 @@
 package com.gingerbread.app;
 
+import com.gingerbread.app.common.copyright;
+import com.gingerbread.app.menu.main;
+
 import java.util.Scanner;
+/**
+ * @author Carlos Ramos;
+ */
 
 public class Main {
-    private static final String[] options = {"Menu Principal","Buscar elemento", "", "", "", "", "", "", "", "Créditos", "Salir"};
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
-        System.out.println(common.getCopyright());
+        copyright.printCopyright();
         System.out.println("Herramienta para la resolución de problemas de la materia de Química");
         do {
-            common.printMenu(options);
+            main.mainPage();
             switch (inputs.inputIntByRange(scanner, 1, 10)) {
                 case 1 -> SearchElement.mainPage(scanner);
-                case 9 -> common.copyrightAndAuthor(scanner);
+                case 9 -> main.Credits();
                 case 10 -> exit = true;
                 default -> System.out.println("Próximamente");
             }

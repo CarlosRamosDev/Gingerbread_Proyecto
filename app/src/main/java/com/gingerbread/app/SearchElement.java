@@ -1,18 +1,21 @@
 package com.gingerbread.app;
 
+import com.gingerbread.app.menu.searchElement;
 import com.gingerbread.lib.periodic_table.atom;
+
+import static com.gingerbread.app.common.pause.pauseByEnter;
+import static com.gingerbread.lib.periodic_table.searchEngines.*;
 
 import java.util.Scanner;
 
-import static com.gingerbread.lib.periodic_table.searchEngines.*;
+
 
 
 public class SearchElement {
-    private static final String[] options = {"Buscador de elementos","Buscar elemento por número atómico", "Buscar elemento por símbolo", "Buscar elemento por nombre", "Salir"};
     public static void mainPage(Scanner scanner) {
         boolean exit = false;
         do {
-            common.printMenu(options);
+            searchElement.mainPage();
             switch (inputs.inputIntByRange(scanner, 1, 4)) {
                 case 1 -> searchByNumberAtomic(scanner);
                 case 2 -> searchBySymbol(scanner);
@@ -29,7 +32,7 @@ public class SearchElement {
             scanner.nextLine();
             atom atom = getByName(scanner.nextLine());
             System.out.println(getResult(atom));
-            common.pause(scanner, 1);
+            pauseByEnter(scanner);
         } catch (Exception e) {
             Debug.printError(e);
         }
@@ -41,7 +44,7 @@ public class SearchElement {
             scanner.nextLine();
             atom atom = getBySymbol(scanner.nextLine());
             System.out.println(getResult(atom));
-            common.pause(scanner, 1);
+            pauseByEnter(scanner);
         } catch (Exception e) {
             Debug.printError(e);
         }
@@ -53,7 +56,7 @@ public class SearchElement {
         try {
             atom atom = getByNumberAtomic(atomicNumber);
             System.out.println(getResult(atom));
-            common.pause(scanner, 2);
+            pauseByEnter(scanner, 2);
         } catch (Exception e) {
             Debug.printError(e);
         }
