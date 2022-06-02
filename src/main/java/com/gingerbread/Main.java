@@ -6,11 +6,22 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         Acces acces = new Acces();
-        System.out.println("Welcome to the User Management System!");
-        System.out.println(acces.authenticate("admin", "adm66in"));
-        /*
+        Scanner scanner = new Scanner(System.in);
+        String name, password;
+        boolean authenticated;
+        System.out.println("Bienvenido, por favor ingrese su nombre de usuario y contraseña");
+        do {
+            System.out.print("Nombre de usuario: ");
+            name = scanner.nextLine();
+            System.out.print("Contraseña: ");
+            password = scanner.nextLine();
+            authenticated = acces.authenticate(name, password);
+            if (!authenticated) {
+                System.out.println("Nombre de usuario o contraseña incorrectos");
+            }
+        } while (!authenticated);
+        System.out.println("Bienvenido " + name);
         boolean exit = false;
         do {
             try {
@@ -25,6 +36,6 @@ public class Main {
                 System.out.println("Error: " + e.getMessage());
             }
         } while (!exit);
-        System.out.println("Hasta pronto!");*/
+        System.out.println("Hasta pronto!");
     }
 }
