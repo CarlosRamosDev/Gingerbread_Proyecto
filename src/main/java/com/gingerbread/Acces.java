@@ -55,12 +55,17 @@ public class Acces {
         }
     }
 
-    public void removeUser(User user){
+    public void removeUser(String name){
         try {
             ArrayList<User> users = loadUsers();
             if (users != null) {
-                users.remove(user);
-                saveUsers(users);
+                for (int i = 0; i < users.size(); i++) {
+                    if (users.get(i).getName().equals(name)) {
+                        users.remove(i);
+                        saveUsers(users);
+                        return;
+                    }
+                }
             }
         } catch (AccesException e) {
             System.out.println(e.getMessage());

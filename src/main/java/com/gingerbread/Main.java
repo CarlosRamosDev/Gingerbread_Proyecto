@@ -63,10 +63,8 @@ public class Main {
                     case 3 -> {
                         System.out.print("Introduce el nombre del usuario: ");
                         String name = scanner.nextLine();
-                        System.out.print("Introduce la contraseña: ");
-                        String password = scanner.nextLine();
                         System.out.println("Eliminando usuario...");
-                        acces.removeUser(new User(name, password));
+                        acces.removeUser(name);
                         System.out.println("Usuario eliminado");
                     }
                     case 4 -> exit = true;
