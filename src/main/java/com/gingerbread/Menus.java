@@ -3,9 +3,10 @@ package com.gingerbread;
 import com.gingerbread.common.Menu;
 
 public class Menus {
+    public static final String copyright = "Copyright (c) Equipo Gingerbread. Todos los derechos reservados.";
     public static Menu getMainMenu() {
         Menu menu = new Menu();
-        menu.setTitle("Titulo del menu principal");
+        menu.setTitle("Menu principal");
         String[] options = new String[10];
         options[1] = "opción 1";
         options[2] = "opción 2";
@@ -14,10 +15,26 @@ public class Menus {
         options[5] = "opción 5";
         options[6] = "opción 6";
         options[7] = "opción 7";
-        options[8] = "opción 8";
-        options[9] = "opción 9";
+        options[8] = "Creitós";
+        options[9] = "salir";
         menu.setOptions(options);
         menu.setBottomText("Selecciona una opción: ");
+        menu.setPauseByEnter(0);
+        return menu;
+    }
+
+    public static Menu getCreditsMenu() {
+        Menu menu = new Menu();
+        menu.setTitle("Créditos");
+        String credits = copyright + "\n" + """
+                Esta es una versión de trabajo en progreso, puede ser inestable.
+                -----------------------------------------------------------------
+                Diego Gael Martin del Campo
+                Carlos Iram Ramos Vasquez
+                Jesús Alejandro Torres Ramírez
+                -----------------------------------------------------------------
+                Pulsa enter para volver al menú principal...""";
+        menu.setBottomText(credits);
         menu.setPauseByEnter(0);
         return menu;
     }
