@@ -1,10 +1,16 @@
 package com.gingerbread;
 
+import com.gingerbread.common.User;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        Acces acces = new Acces();
+        System.out.println("Welcome to the User Management System!");
+        System.out.println(acces.authenticate("admin", "adm66in"));
+        /*
         boolean exit = false;
         do {
             try {
@@ -19,6 +25,6 @@ public class Main {
                 System.out.println("Error: " + e.getMessage());
             }
         } while (!exit);
-        System.out.println("Hasta pronto!");
+        System.out.println("Hasta pronto!");*/
     }
 }
