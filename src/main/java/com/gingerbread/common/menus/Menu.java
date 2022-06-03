@@ -1,4 +1,4 @@
-package com.gingerbread.common;
+package com.gingerbread.common.menus;
 
 import java.util.Scanner;
 
@@ -63,7 +63,7 @@ public class Menu implements com.gingerbread.common.interfaces.Menu {
     }
 
     public String printMenu(Scanner scanner){
-        String option = "";
+        String option;
         System.out.println("-------- " + this.title + " --------");
         if (this.options != null){
             for (int i = 0; i < this.options.length; i++){
