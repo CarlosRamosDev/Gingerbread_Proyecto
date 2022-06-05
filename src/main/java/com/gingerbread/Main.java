@@ -11,11 +11,15 @@ public class Main {
         System.out.println("-------------------- Work In Progress (WIP) --------------------");
         System.out.println(Menus.copyright);
         do {
-            switch (Integer.parseInt(Menus.getLoginMenu().printMenu(scanner))) {
-                case 1 -> id = com.gingerbread.accounts.Manager.signInMenu(scanner);
-                case 2 -> id = com.gingerbread.accounts.Manager.signUpMenu(scanner);
-                case 3 -> exit = true;
-                default -> System.out.println("Opción inválida");
+            try {
+                switch (Integer.parseInt(Menus.getLoginMenu().printMenu(scanner))) {
+                    case 1 -> id = com.gingerbread.accounts.Manager.signInMenu(scanner);
+                    case 2 -> id = com.gingerbread.accounts.Manager.signUpMenu(scanner);
+                    case 3 -> exit = true;
+                    default -> System.out.println("Opción inválida");
+                }
+            } catch (Exception e) {
+                System.out.println("Ingrese una opción válida");
             }
         } while (id == null & !exit);
         while (!exit) {
