@@ -45,12 +45,9 @@ public class Menus {
     public static Menu getUserMenu() {
         Menu menu = new Menu();
         menu.setTitle("Administrar cuenta");
-        String[] options = new String[6];
-        options[1] = "Mostrar usuario";
-        options[2] = "Cambiar nombre";
-        options[3] = "Cambiar contraseña";
-        options[4] = "Eliminar Cuenta";
-        options[5] = "Salir";
+        String[] options = new String[3];
+        options[1] = "Cambiar nombre";
+        options[2] = "Salir";
         menu.setOptions(options);
         menu.setBottomText("Selecciona una opción: ");
         menu.setPauseByEnter(0);
@@ -83,10 +80,32 @@ public class Menus {
         return menu;
     }
 
-    public static Menu getAccountMenu(UUID userId) {
-        if ((Access.getUser(userId).getRole()) == 0) {
-            return getAdminMenu();
-        }
-        return getUserMenu();
+    public static boolean getAccountMenu(Scanner scanner ,UUID userId) {
+        boolean exit = false;
+        do {
+            if (Access.getUser(userId).getRole() == 0) {
+                switch (Integer.parseInt(getAdminMenu().printMenu(scanner))) {
+                    case 1 -> {
+                        Access.showUsers();
+                        System.out.print("Pulsa enter para continuar...");
+                        scanner.nextLine();
+                    }
+                    case 2 -> {
+                        System.out.print("Ingrese el UUID del usuario a eliminar: ");
+                        Access.removeUser(scanner.nextLine());
+                    }
+                    case 3 -> exit = true;
+                }
+            } else {
+                switch (Integer.parseInt(getUserMenu().printMenu(scanner))) {
+                    case 1 -> {
+                        System.out.print("Ingrese el nuevo nombre: ");
+                        Access.changeName(userId, scanner.nextLine());
+                    }
+                    case 2 -> exit = true;
+                }
+            }
+        } while (!exit);
+        return false;
     }
 }

@@ -3,13 +3,78 @@ package com.gingerbread.accounts;
 import com.gingerbread.common.User;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.UUID;
 
 public class Access {
-    Storage storage;
+    static Storage storage;
     public Access() {
         storage = new Storage();
     }
+
+    public static void showUsers() {
+        try {
+            ArrayList<User> users = storage.getUsers();
+            System.out.println("Usuarios registrados:");
+            System.out.println("UUID\t\t\t\t\t\t\t\t\tNombre\t\tRol");
+            for (User user : users) {
+                System.out.println(user.getId() + "\t" + user.getName() + "\t\t" + user.getRole());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void removeUser(String uuid) {
+        try {
+            removeUser(UUID.fromString(uuid));
+        } catch (Exception e) {
+            System.out.println("UUID invalido");
+        }
+    }
+
+    public static void removeUser(UUID userId) {
+        try {
+            ArrayList<User> users = storage.getUsers();
+            for (int i = 0; i < users.size(); i++) {
+                if (users.get(i).getRole() != 0) {
+                    if (users.get(i).getId().equals(userId)) {
+                        users.remove(i);
+                        storage.setUsers(users);
+                        System.out.println("Usuario eliminado");
+                        return;
+                    } else {
+                        System.out.println("Usuario no encontrado");
+                    }
+                } else if (users.get(i).getRole() == 0 & users.get(i).getId().equals(userId)) {
+                    System.out.println("No se puede eliminar el usuario administrador");
+                } else {
+                    System.out.println("Usuario no encontrado");
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void changeName(UUID userId, String name) {
+        try {
+            ArrayList<User> users = storage.getUsers();
+            for (int i = 0; i < users.size(); i++) {
+                if (users.get(i).getRole() != 0) {
+                    if (users.get(i).getId().equals(userId)) {
+                        users.get(i).setName(name);
+                        storage.setUsers(users);
+                        System.out.println("Nombre cambiado a " + name);
+                        return;
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public void signUp(String name, String password) {
         Storage storage = new Storage();
         ArrayList<User> users;
