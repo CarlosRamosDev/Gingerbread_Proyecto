@@ -3,7 +3,6 @@ package com.gingerbread.accounts;
 import com.gingerbread.common.User;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 import java.util.UUID;
 
 public class Access {
@@ -43,13 +42,9 @@ public class Access {
                         storage.setUsers(users);
                         System.out.println("Usuario eliminado");
                         return;
-                    } else {
-                        System.out.println("Usuario no encontrado");
                     }
                 } else if (users.get(i).getRole() == 0 & users.get(i).getId().equals(userId)) {
                     System.out.println("No se puede eliminar el usuario administrador");
-                } else {
-                    System.out.println("Usuario no encontrado");
                 }
             }
         } catch (Exception e) {
@@ -61,13 +56,11 @@ public class Access {
         try {
             ArrayList<User> users = storage.getUsers();
             for (int i = 0; i < users.size(); i++) {
-                if (users.get(i).getRole() != 0) {
-                    if (users.get(i).getId().equals(userId)) {
-                        users.get(i).setName(name);
-                        storage.setUsers(users);
-                        System.out.println("Nombre cambiado a " + name);
-                        return;
-                    }
+                if (users.get(i).getId().equals(userId)) {
+                    users.get(i).setName(name);
+                    storage.setUsers(users);
+                    System.out.println("Nombre cambiado a " + name);
+                    return;
                 }
             }
         } catch (Exception e) {
@@ -75,13 +68,36 @@ public class Access {
         }
     }
 
-    public void signUp(String name, String password) {
+    public static void changePassword(UUID userId, String newPassword) {
+        try {
+            ArrayList<User> users = storage.getUsers();
+            for (int i = 0; i < users.size(); i++) {
+                if (users.get(i).getId().equals(userId)) {
+                    users.get(i).setPassword(newPassword);
+                    storage.setUsers(users);
+                    System.out.println("Contraseña cambiada");
+                    return;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void signUp(String name, String password) throws userExistsException {
         Storage storage = new Storage();
         ArrayList<User> users;
         try {
             users = storage.getUsers();
+            for (User user : users) {
+                if (user.getName().equals(name)) {
+                    throw new userExistsException();
+                }
+            }
             users.add(new User(name, password));
             storage.setUsers(users);
+        } catch (userExistsException e) {
+            throw new userExistsException();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -133,6 +149,18 @@ public class Access {
             e.printStackTrace();
         }
         return null;
+    }
+}
+
+class userExistsException extends Exception {
+    public userExistsException() {
+        super("El usuario ya existe");
+    }
+}
+
+class userNotFoundException extends Exception {
+    public userNotFoundException() {
+        super("El usuario no existe");
     }
 }
 

@@ -45,9 +45,11 @@ public class Menus {
     public static Menu getUserMenu() {
         Menu menu = new Menu();
         menu.setTitle("Administrar cuenta");
-        String[] options = new String[3];
+        String[] options = new String[5];
         options[1] = "Cambiar nombre";
-        options[2] = "Salir";
+        options[2] = "Cambiar contraseña";
+        options[3] = "Eliminar cuenta";
+        options[4] = "Salir";
         menu.setOptions(options);
         menu.setBottomText("Selecciona una opción: ");
         menu.setPauseByEnter(0);
@@ -57,10 +59,12 @@ public class Menus {
     public static Menu getAdminMenu() {
         Menu menu = new Menu();
         menu.setTitle("Administrador de cuentas");
-        String[] options = new String[4];
+        String[] options = new String[6];
         options[1] = "Mostrar usuarios";
         options[2] = "Remover usuario";
-        options[3] = "Salir";
+        options[3] = "Cambiar nombre de cuenta";
+        options[4] = "Cambiar contraseña de cuenta";
+        options[5] = "Salir";
         menu.setOptions(options);
         menu.setBottomText("Selecciona una opción: ");
         menu.setPauseByEnter(0);
@@ -94,7 +98,15 @@ public class Menus {
                         System.out.print("Ingrese el UUID del usuario a eliminar: ");
                         Access.removeUser(scanner.nextLine());
                     }
-                    case 3 -> exit = true;
+                    case 3 -> {
+                        System.out.print("Ingresa el nuevo nombre de usuario: ");
+                        Access.changeName(userId ,scanner.nextLine());
+                    }
+                    case 4 -> {
+                        System.out.print("Ingrese la nueva contraseña: ");
+                        Access.changePassword(userId, scanner.nextLine());
+                    }
+                    case 5 -> exit = true;
                 }
             } else {
                 switch (Integer.parseInt(getUserMenu().printMenu(scanner))) {
@@ -102,7 +114,18 @@ public class Menus {
                         System.out.print("Ingrese el nuevo nombre: ");
                         Access.changeName(userId, scanner.nextLine());
                     }
-                    case 2 -> exit = true;
+                    case 2 -> {
+                        System.out.print("Ingrese la nueva contraseña: ");
+                        Access.changePassword(userId, scanner.nextLine());
+                    }
+                    case 3 -> {
+                        System.out.print("Seguro que quieres eliminar tu cuenta? (s/n): ");
+                        if (scanner.nextLine().equals("s")) {
+                            Access.removeUser(userId);
+                            return true;
+                        }
+                    }
+                    case 4 -> exit = true;
                 }
             }
         } while (!exit);
