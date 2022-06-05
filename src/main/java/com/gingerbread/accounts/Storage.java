@@ -24,18 +24,18 @@ public class Storage {
         }
     }
 
+    public static void generateDefaultUsers() throws Exception {
+        ArrayList<User> users = new ArrayList<>();
+        users.add(new User("admin", "admin", UUID.randomUUID(), 0));
+        StorageManager.setObjectFile(filePhat, users);
+    }
+
     @SuppressWarnings("unchecked")
     ArrayList<User> getUsers() throws Exception {
         return (ArrayList<User>) StorageManager.getObjectFile(filePhat);
     }
 
     void setUsers(ArrayList<User> users) throws Exception {
-        StorageManager.setObjectFile(filePhat, users);
-    }
-
-    public static void generateDefaultUsers() throws Exception {
-        ArrayList<User> users = new ArrayList<>();
-        users.add(new User("admin", "admin", UUID.randomUUID(), 0));
         StorageManager.setObjectFile(filePhat, users);
     }
 }

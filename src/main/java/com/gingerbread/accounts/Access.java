@@ -7,6 +7,7 @@ import java.util.UUID;
 
 public class Access {
     static Storage storage;
+
     public Access() {
         storage = new Storage();
     }
@@ -84,6 +85,22 @@ public class Access {
         }
     }
 
+    public static User getUser(UUID id) {
+        Storage storage = new Storage();
+        ArrayList<User> users;
+        try {
+            users = storage.getUsers();
+            for (User user : users) {
+                if (user.getId().equals(id)) {
+                    return user;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     public void signUp(String name, String password) throws userExistsException {
         Storage storage = new Storage();
         ArrayList<User> users;
@@ -133,22 +150,6 @@ public class Access {
             e.printStackTrace();
         }
         return false;
-    }
-
-    public static User getUser(UUID id) {
-        Storage storage = new Storage();
-        ArrayList<User> users;
-        try {
-            users = storage.getUsers();
-            for (User user : users) {
-                if (user.getId().equals(id)) {
-                    return user;
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 }
 

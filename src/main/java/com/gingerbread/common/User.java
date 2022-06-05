@@ -9,26 +9,28 @@ public class User implements com.gingerbread.common.interfaces.User, Serializabl
     private UUID id;
     private int role;
 
-    public User(){
+    public User() {
         this.name = "";
         this.password = "";
         this.id = null;
         this.role = 1;
     }
-    public User(String name, String password){
+
+    public User(String name, String password) {
         this.name = name;
         this.password = password;
         this.id = UUID.randomUUID();
         this.role = 1;
     }
 
-    public User(String name, String password, UUID id){
+    public User(String name, String password, UUID id) {
         this.name = name;
         this.password = password;
         this.id = id;
         this.role = 1;
     }
-    public User(String name, String password, UUID id, int role){
+
+    public User(String name, String password, UUID id, int role) {
         this.name = name;
         this.password = password;
         this.id = id;
@@ -36,26 +38,23 @@ public class User implements com.gingerbread.common.interfaces.User, Serializabl
     }
 
     @Override
-    public String getName(){
+    public String getName() {
         return this.name;
     }
 
     @Override
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
-    @Override
-    public void setId(UUID id) {
-        this.id = id;
-    }
+
     @Override
     public UUID getId() {
         return this.id;
     }
 
     @Override
-    public void setRole(int level) {
-        this.role = level;
+    public void setId(UUID id) {
+        this.id = id;
     }
 
     @Override
@@ -64,12 +63,17 @@ public class User implements com.gingerbread.common.interfaces.User, Serializabl
     }
 
     @Override
-    public void setPassword(String password){
+    public void setRole(int level) {
+        this.role = level;
+    }
+
+    @Override
+    public void setPassword(String password) {
         this.password = password;
     }
 
     @Override
-    public boolean authenticate(String name, String password){
+    public boolean authenticate(String name, String password) {
         return this.name.equals(name) && this.password.equals(password);
     }
 }

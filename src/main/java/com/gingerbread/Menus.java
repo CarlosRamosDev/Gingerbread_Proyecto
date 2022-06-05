@@ -8,6 +8,7 @@ import java.util.UUID;
 
 public class Menus {
     public static final String copyright = "Copyright (c) Equipo Gingerbread. Todos los derechos reservados.";
+
     public static Menu getMainMenu() {
         Menu menu = new Menu();
         menu.setTitle("Menu principal");
@@ -84,7 +85,7 @@ public class Menus {
         return menu;
     }
 
-    public static boolean getAccountMenu(Scanner scanner ,UUID userId) {
+    public static boolean getAccountMenu(Scanner scanner, UUID userId) {
         boolean exit = false;
         do {
             if (Access.getUser(userId).getRole() == 0) {
@@ -100,7 +101,7 @@ public class Menus {
                     }
                     case 3 -> {
                         System.out.print("Ingresa el nuevo nombre de usuario: ");
-                        Access.changeName(userId ,scanner.nextLine());
+                        Access.changeName(userId, scanner.nextLine());
                     }
                     case 4 -> {
                         System.out.print("Ingrese la nueva contraseña: ");

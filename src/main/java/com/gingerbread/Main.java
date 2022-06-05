@@ -21,7 +21,7 @@ public class Main {
         while (!exit) {
             try {
                 switch (Integer.parseInt(Menus.getMainMenu().printMenu(scanner))) {
-                    case 7 -> exit = Menus.getAccountMenu(scanner,id);
+                    case 7 -> exit = Menus.getAccountMenu(scanner, id);
                     case 8 -> Menus.getCreditsMenu().printMenu(scanner);
                     case 9 -> exit = true;
                     default -> System.out.println("Error: No tienes una suscripción activa");
