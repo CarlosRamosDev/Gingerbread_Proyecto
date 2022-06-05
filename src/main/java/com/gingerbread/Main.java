@@ -8,14 +8,13 @@ import java.util.UUID;
 
 public class Main {
     public static void main(String[] args) {
-        Access access = new Access();
         boolean exit = false;
         UUID id = null;
         Scanner scanner = new Scanner(System.in);
         System.out.println("-------------------- Work In Progress (WIP) --------------------");
         System.out.println(Menus.copyright);
         do {
-            switch (Integer.parseInt(Menus.getLoginMenu(scanner).printMenu(scanner))) {
+            switch (Integer.parseInt(Menus.getLoginMenu().printMenu(scanner))) {
                 case 1 -> id = com.gingerbread.accounts.Manager.signInMenu(scanner);
                 case 2 -> id = com.gingerbread.accounts.Manager.signUpMenu(scanner);
                 case 3 -> exit = true;
@@ -25,6 +24,9 @@ public class Main {
         while (!exit) {
             try {
                 switch (Integer.parseInt(Menus.getMainMenu().printMenu(scanner))) {
+                    case 7 -> {
+                        Menus.getAccountMenu(id).printMenu(scanner);
+                    }
                     case 8 -> Menus.getCreditsMenu().printMenu(scanner);
                     case 9 -> exit = true;
                     default -> System.out.println("Error: No tienes una suscripción activa");

@@ -7,8 +7,8 @@ public interface User {
     public void setName(String name);
     public void setId(UUID id);
     public UUID getId();
-    public void setSubscriptionLevel(int level);
-    public int getSubscriptionLevel();
+    public void setRole(int level);
+    public int getRole();
     public void setPassword(String password);
     public boolean authenticate(String name, String password);
 }

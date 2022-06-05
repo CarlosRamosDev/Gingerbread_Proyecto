@@ -35,7 +35,7 @@ public class Storage {
 
     public static void generateDefaultUsers() throws Exception {
         ArrayList<User> users = new ArrayList<>();
-        users.add(new User("admin", "admin", UUID.randomUUID(), 9));
+        users.add(new User("admin", "admin", UUID.randomUUID(), 0));
         StorageManager.setObjectFile(filePhat, users);
     }
 }

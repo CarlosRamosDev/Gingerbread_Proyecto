@@ -7,32 +7,32 @@ public class User implements com.gingerbread.common.interfaces.User, Serializabl
     private String name;
     private String password;
     private UUID id;
-    private int subscriptionLevel;
+    private int role;
 
     public User(){
         this.name = "";
         this.password = "";
         this.id = null;
-        this.subscriptionLevel = 0;
+        this.role = 1;
     }
     public User(String name, String password){
         this.name = name;
         this.password = password;
         this.id = UUID.randomUUID();
-        this.subscriptionLevel = 0;
+        this.role = 1;
     }
 
     public User(String name, String password, UUID id){
         this.name = name;
         this.password = password;
         this.id = id;
-        this.subscriptionLevel = 0;
+        this.role = 1;
     }
-    public User(String name, String password, UUID id, int subscriptionLevel){
+    public User(String name, String password, UUID id, int role){
         this.name = name;
         this.password = password;
         this.id = id;
-        this.subscriptionLevel = subscriptionLevel;
+        this.role = role;
     }
 
     @Override
@@ -54,13 +54,13 @@ public class User implements com.gingerbread.common.interfaces.User, Serializabl
     }
 
     @Override
-    public void setSubscriptionLevel(int level) {
-        this.subscriptionLevel = level;
+    public void setRole(int level) {
+        this.role = level;
     }
 
     @Override
-    public int getSubscriptionLevel() {
-        return this.subscriptionLevel;
+    public int getRole() {
+        return this.role;
     }
 
     @Override

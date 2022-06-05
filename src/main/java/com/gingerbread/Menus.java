@@ -1,8 +1,10 @@
 package com.gingerbread;
 
+import com.gingerbread.accounts.Access;
 import com.gingerbread.common.menus.Menu;
 
 import java.util.Scanner;
+import java.util.UUID;
 
 public class Menus {
     public static final String copyright = "Copyright (c) Equipo Gingerbread. Todos los derechos reservados.";
@@ -68,7 +70,7 @@ public class Menus {
         return menu;
     }
 
-    public static Menu getLoginMenu(Scanner scanner) {
+    public static Menu getLoginMenu() {
         Menu menu = new Menu();
         menu.setTitle("Por favor, inicia sesión o registrate");
         String[] options = new String[4];
@@ -79,5 +81,12 @@ public class Menus {
         menu.setBottomText("Selecciona una opción: ");
         menu.setPauseByEnter(0);
         return menu;
+    }
+
+    public static Menu getAccountMenu(UUID userId) {
+        if ((Access.getUser(userId).getRole()) == 0) {
+            return getAdminMenu();
+        }
+        return getUserMenu();
     }
 }
