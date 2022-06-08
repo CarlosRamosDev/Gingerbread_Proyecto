@@ -28,6 +28,7 @@ public class Access {
     public static void removeUser(String uuid) {
         try {
             removeUser(UUID.fromString(uuid));
+
         } catch (Exception e) {
             System.out.println("UUID invalido");
         }

@@ -1,5 +1,7 @@
 package com.gingerbread.common.menus;
 
+import com.gingerbread.common.Logs;
+
 import java.util.Scanner;
 
 public class Menu implements com.gingerbread.common.interfaces.Menu {
@@ -62,7 +64,7 @@ public class Menu implements com.gingerbread.common.interfaces.Menu {
         this.pauseByEnter = pauseByEnter;
     }
 
-    public String printMenu(Scanner scanner) {
+    public String printMenu(Scanner scanner, Logs logs) {
         String option;
         System.out.println("-------- " + this.title + " --------");
         if (this.options != null) {
@@ -72,6 +74,7 @@ public class Menu implements com.gingerbread.common.interfaces.Menu {
                 }
             }
         }
+        logs.newLog("Menus/INFO", "Se imprimio el menu: " + this.title);
         System.out.print(this.bottomText);
         option = scanner.nextLine();
         if (this.pauseByEnter != 0) {
@@ -79,6 +82,7 @@ public class Menu implements com.gingerbread.common.interfaces.Menu {
                 scanner.nextLine();
             }
         }
+        logs.newLog("Menus/INFO", "El usuario ha seleccionado la opción " + option);
         return option;
     }
 }
