@@ -17,6 +17,9 @@ public class Storage {
         try {
             if (!Files.exists(path)) {
                 Files.createDirectories(path);
+            }
+            if (!Files.exists(filePhat)) {
+                Files.createFile(filePhat);
                 generateDefaultUsers();
             }
         } catch (Exception e) {
