@@ -1,6 +1,7 @@
 package com.gingerbread;
 
 import com.gingerbread.accounts.Access;
+import com.gingerbread.common.Logs;
 import com.gingerbread.common.menus.Menu;
 
 import java.util.Scanner;
@@ -85,11 +86,11 @@ public class Menus {
         return menu;
     }
 
-    public static boolean getAccountMenu(Scanner scanner, UUID userId) {
+    public static boolean getAccountMenu(Scanner scanner, UUID userId, Logs logs) {
         boolean exit = false;
         do {
             if (Access.getUser(userId).getRole() == 0) {
-                switch (Integer.parseInt(getAdminMenu().printMenu(scanner))) {
+                switch (Integer.parseInt(getAdminMenu().printMenu(scanner, logs))) {
                     case 1 -> {
                         Access.showUsers();
                         System.out.print("Pulsa enter para continuar...");
@@ -110,7 +111,7 @@ public class Menus {
                     case 5 -> exit = true;
                 }
             } else {
-                switch (Integer.parseInt(getUserMenu().printMenu(scanner))) {
+                switch (Integer.parseInt(getUserMenu().printMenu(scanner, logs))) {
                     case 1 -> {
                         System.out.print("Ingrese el nuevo nombre: ");
                         Access.changeName(userId, scanner.nextLine());
