@@ -40,7 +40,7 @@ public class Topic_1 {
     //Métodos
     public void imprimirTema1_1() {
         topic1_1 = """
-                1.1 El átomo y sus partículas subatómicas.
+                1.1 El átomo y sus partículas subatómicas
                 Una Partícula Subatómicas es una partícula más pequeña que el átomo. Puede ser una partícula elemental o una compuesta, a su vez, por otras partículas subatómicas, como son los quarks, que componen los protones y neutrones.
                 Estructura atómica
                 La idea de la existencia de átomos se remonta al año 500 A.C. porque ya Demócrata consideraba que la materia se componía de partículas indivisibles denominadas átomos.
