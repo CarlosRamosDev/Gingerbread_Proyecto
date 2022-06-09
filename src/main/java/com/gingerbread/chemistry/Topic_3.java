@@ -31,7 +31,7 @@ public class Topic_3 {
     }
 
     public void imprimirTema1_3() {
-        topic1_3 = "1.3 Teoría atómica de Bohr.\n"
+        topic1_3 = "1.3 Teoría atómica de Bohr\n"
                 + "El modelo de Bohr está basado en los siguientes postulados, que son válidos para átomos con un solo electrón como el hidrógeno y permitió explicar sus espectros de emisión y absorción.\n"
                 + "Postulados:\n"
                 + "1. Primer Postulado: Estabilidad del Electrón\n"
