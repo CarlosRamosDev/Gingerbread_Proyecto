@@ -70,7 +70,7 @@ public class Topic_4 {
     }
 
     public void imprimirTema1_4() {
-        topic1_4 = "1.4 Teoría cuántica.\n"
+        topic1_4 = "1.4 Teoría cuántica\n"
                 + "La teoría cuántica, es una teoría física basada en la utilización del concepto de unidad cuántica para describir las propiedades dinámicas de las partículas subatómicas y las interacciones entre la materia y la radiación. \n"
                 + "Las bases de la teoría fueron sentadas por el físico alemán Max Planck, que en 1900 postuló que la materia sólo puede emitir o absorber energía en pequeñas unidades discretas llamadas cuantos. \n"
                 + "Otra contribución fundamental al desarrollo de la teoría fue el principio de incertidumbre, formulado por el físico alemán Werner Heisenberg en 1927, y que afirma que no es posible especificar con exactitud simultáneamente la posición y el momento lineal de una partícula subatómica.\n"
@@ -81,7 +81,7 @@ public class Topic_4 {
     }
 
     public void imprimirTema1_4_1() {
-        topic1_4_1 = "1.4.1 Principio de dualidad. Postulado de Broglie.\n"
+        topic1_4_1 = "1.4.1 Principio de dualidad. Postulado de Broglie\n"
                 + "El punto de partida que tuvo Broglie para desarrollar su tesis fue la inquietante dualidad en el comportamiento de la luz, que en ciertos fenómenos se manifiesta como onda, en otros como partícula.\n"
                 + "El principio de la dualidad descansa sobre el efecto fotoeléctrico, el cual plantea que la luz puede comportarse de dos maneras según las circunstancias:\n"
                 + "1.- Luz como una Onda: esta es usada en la física clásica, sobre todo en óptica, donde los lentes y los espectros visibles requieres de su estudio a través de las propiedades de las ondas.\n"
@@ -95,7 +95,7 @@ public class Topic_4 {
     }
 
     public void imprimirTema1_4_2() {
-        topic1_4_2 = "1.4.2 Principio de incertidumbre de Heisenberg.\n"
+        topic1_4_2 = "1.4.2 Principio de incertidumbre de Heisenberg\n"
                 + "El físico alemán Werner K. Heisenberg es conocido sobre todo por formular el principio de incertidumbre, una contribución fundamental al desarrollo de la teoría cuántica. Este principio afirma que es imposible medir simultáneamente de forma precisa la posición y el momento lineal de una partícula. Heisenberg fue galardonado con el Premio Nobel de Física en 1932. El principio de incertidumbre ejerció una profunda influencia en la física y en la filosofía del siglo XX\n"
                 + "El principio de incertidumbre desempeñó un importante papel en el desarrollo de la mecánica cuántica y en el progreso del pensamiento filosófico moderno.\n"
                 + "En mecánica cuántica, la relación de indeterminación de Heisenberg o relación de incertidumbre de Heisenberg afirma que no se puede determinar, simultáneamente y con precisión arbitraria, ciertos pares de variables físicas, como son, por ejemplo, la posición y el momento lineal (cantidad de movimiento) de un objeto dado. En otras palabras, cuanta mayor certeza se busca en determinar la posición de una partícula, menos se conoce su cantidad de movimiento lineal. Este principio fue enunciado por Werner Heisenberg en 1927.\n"
@@ -104,7 +104,7 @@ public class Topic_4 {
     }
 
     public void imprimirTema1_4_3() {
-        topic1_4_3 = "1.4.3 Ecuación de onda de Schrödinger.\n"
+        topic1_4_3 = "1.4.3 Ecuación de onda de Schrödinger\n"
                 + "En 1926 Erwin Schrödinger formula la ecuación de onda de Schrödinger, que describe el comportamiento y la energía de las partículas submicroscópicas. Es una función análoga a las leyes de Newton para los sólidos microscópicos que incorpora tanto el carácter de partícula (en función de la masa) como el carácter de onda en términos de una función de onda Ψ ( psi).\n"
                 + "La ecuación de Schrödinger inició una nueva era para la Física y la Química, porque abrió un nuevo campo, la mecánica cuántica (también llamada mecánica ondulatoria). El desarrollo de la teoría cuántica de 1913 fue el tiempo en que Bohr presentó su análisis del átomo de hidrógeno a 1926 se refiere ahora como \"la vieja teoría cuántica”. Aunque esta ecuación diferencial era continua y proporcionaba soluciones para todos los puntos del espacio, las soluciones permitidas de la ecuación estaban restringidas por ciertas condiciones expresadas por ecuaciones matemáticas llamadas funciones propias \n"
                 + "Así, la ecuación de onda de Schrödinger sólo tenía determinadas soluciones discretas; estas soluciones eran expresiones matemáticas en las que los números cuánticos aparecían como parámetros (los números cuánticos son números enteros introducidos en la física de partículas para indicar las magnitudes de determinadas cantidades características de las partículas o sistemas).\n"
@@ -113,7 +113,7 @@ public class Topic_4 {
     }
 
     public void imprimirTema1_4_3_1() {
-        topic1_4_3_1 = "1.4.3.1 Significado físico de la función de onda ψ 2.\n"
+        topic1_4_3_1 = "1.4.3.1 Significado físico de la función de onda ψ 2\n"
                 + "La ecuación de Schrödinger requiere cálculos avanzados para ser resuelta. Sin embargo, es importante destacar que esta ecuación incorpora ambos comportamientos, en términos de masa m, y ondulatorio, en términos de una función de onda Ψ (psi), que depende de la posición del sistema en el espacio (como la de un electrón en un átomo). \n"
                 + "La función de onda en sí misma no tiene significado físico real directo. Sin embargo, el cuadrado de la función de la onda, Ψ, está relacionado con la probabilidad de encontrar al electrón en cierta región del espacio. Se puede pensar en Ψ, como la probabilidad por unidad de volumen de tal manera que el producto de Ψ por un pequeño volumen (llamado elemento de volumen) da la probabilidad de encontrar el electrón dentro de ese volumen. (La razón de especificar un pequeño volumen es que Ψ varía de una región del espacio a otra, pero su valor se puede considerar constante dentro de un pequeño volumen.)\n"
                 + "La probabilidad total de localizar al electrón en un volumen dado (por ejemplo, alrededor del núcleo del átomo) está entonces dada por la suma de todos los productos de Ψ y el volumen correspondiente de los elementos. La idea de relacionar Ψ con la noción de la probabilidad, proviene de una analogía de la teoría ondulatoria. De acuerdo con la teoría ondulatoria, la intensidad de la luz es proporcional al cuadrado de la amplitud de la onda, o Ψ. El lugar más favorecido para encontrar un fotón es donde la intensidad es mayor, esto es, donde el valor de Ψ es máximo.";
