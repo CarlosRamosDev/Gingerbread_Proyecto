@@ -61,7 +61,7 @@ public class Topic_2 {
     //Métodos
     public void imprimirTema1_2() {
         topic1_2 = """
-                1.2 Base experimental de la teoría cuántica.
+                1.2 Base experimental de la teoría cuántica
                 Es una teoría física basada en la utilización del concepto de unidad cuántica para describir las propiedades dinámicas de las partículas subatómicas y las interacciones entre la materia y la radiación. Las bases de la teoría fueron por el físico alemán Max Planck, que en 1900 postulo que la materia solo puede emitir o absorber energía en pequeñas unidades discretas llamadas cuantos.\s
                 La teoría cuántica básicamente nos dice que la luz no llega de una manera continua, sino que está compuesta por pequeños paquetes de energía, a los que llamamos cuantos. Estos cuantos de energía se llaman fotones. Los fotones son las partículas “fundamentales” de la luz, así como los electrones son las partículas fundamentales de la materia, esta analogía es la que sirvió para realizar el descubrimiento del carácter cuántico de la luz.\s
                 Por esta misma analogía, años después, Broglie desarrollo la teoría que formula que la materia también tiene un carácter ondulatorio. La carga eléctrica y la energía tiene una estructura granular (está formada por cuantos), al igual que la materia.
@@ -87,7 +87,7 @@ public class Topic_2 {
 
     public void imprimirTema1_2_2() {
         topic1_2_2 = """
-                1.2.2 Radiación del cuerpo negro y teoría de Planck.
+                1.2.2 Radiación del cuerpo negro y teoría de Planck
                 * Es aquel que además absorbe toda la radiación que llega a él sin reflejarla, de tal forma que sólo emite la correspondiente a su temperatura.
                 * A fines del siglo XIX fue posible medir la radiación de un cuerpo negro con mucha precisión. La intensidad de esta radiación puede en principio ser calculada utilizando las leyes del electromagnetismo.
                 * Quien logró explicar este fenómeno fue Max Planck, en 1900, que debió para ello sacrificar los conceptos básicos de la concepción ondulatoria de la radiación electromagnética.
@@ -99,7 +99,7 @@ public class Topic_2 {
 
     public void imprimirTema1_2_3() {
         topic1_2_3 = """
-                1.2.3 Efecto fotoeléctrico.
+                1.2.3 Efecto fotoeléctrico
                 Este efecto, se trata de otro fenómeno que, al igual que la radiación de cuerpo negro, también involucra la interacción entre la radiación y la materia.\s
                 Pero esta vez se trata de absorción de radiación de metales. Heinrich Hertz (1857-1894), científico alemán, fue el primero en observar el efecto fotoeléctrico, en 1887, mientras trabajaba en la generación de ondas de radio. Informó esta observación, pero no se dedicó a explicarla. Al incidir luz ultravioleta sobre el cátodo metálico (fotocátodo) se detecta el paso de una corriente eléctrica.
                 Se trata de electrones que abandonan el cátodo (colector) y se dirigen al ánodo a través del vacío dentro del tubo. Los electrodos se hallan conectados a una diferencia de potencial de sólo unos pocos voltios. La teoría electromagnética clásica considera que la radiación de mayor intensidad (o brillo, si es visible), que corresponde a ondas de mayor amplitud, transporta mayor energía. Esta energía se halla distribuida uniformemente a lo largo del frente de onda. La intensidad es igual a la energía que incide, cada unidad de tiempo, en una unidad de superficie. Con radiación ultravioleta de diferentes intensidades, los electrones salen del metal con la misma velocidad. La radiación más intensa arranca mayor número de electrones. Esta observación también resultaba inexplicable.""";
@@ -108,7 +108,7 @@ public class Topic_2 {
 
     public void imprimirTema1_2_4() {
         topic1_2_4 = """
-                1.2.4 Espectros de emisión y series espectrales.
+                1.2.4 Espectros de emisión y series espectrales
                 Espectros de emisión y series espectrales
                 Son aquellos que se obtienen al descomponer las radiaciones emitidas por un cuerpo previamente excitado.
                 - Los espectros de emisión continuos se obtienen al pasar las radiaciones de cualquier sólido incandescente por un prisma. Todos los sólidos a la misma Temperatura producen espectros de emisión iguales.
