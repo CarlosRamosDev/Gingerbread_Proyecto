@@ -3,7 +3,7 @@ package com.gingerbread.chemistry;
 import java.util.Scanner;
 
 public class TopicList {
-    public static Topic getList(Scanner scanner) {
+    public static void topicList(Scanner scanner) {
         Topic topic = new Topic();
         topic.setName("Temas de la materia");
         topic.setDescription("Selecciona un tema para ver más información");
@@ -14,6 +14,5 @@ public class TopicList {
         //topic.addSubtopic(Topic_5.Topic());
         topic.addSubtopic(Topic_6.Topic());
         topic.menu(scanner);
-        return topic;
     }
 }
