@@ -29,7 +29,7 @@ public class Main {
         while (!exit) {
             try {
                 switch (Integer.parseInt(Menus.getMainMenu().printMenu(scanner, logs))) {
-                    case 1 -> com.gingerbread.chemistry.TopicList.getList(scanner);
+                    case 1 -> com.gingerbread.chemistry.TopicList.topicList(scanner);
                     case 7 -> exit = Menus.getAccountMenu(scanner, id, logs);
                     case 8 -> Menus.getCreditsMenu().printMenu(scanner, logs);
                     case 9 -> exit = true;
