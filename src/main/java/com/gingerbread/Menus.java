@@ -15,11 +15,11 @@ public class Menus {
         menu.setTitle("Menu principal");
         String[] options = new String[10];
         options[1] = "Información";
-        options[2] = "opción 2";
-        options[3] = "opción 3";
-        options[4] = "opción 4";
-        options[5] = "opción 5";
-        options[6] = "opción 6";
+        options[2] = "Calcular longitud de onda";
+        options[3] = "Calcular frecuencia";
+        options[4] = "Calcular energía";
+        options[5] = "Calcular frecuencia utilizando la energía";
+        options[6] = "Calcular energía utilizando el modelo de Bhor";
         options[7] = "Administrador de Cuenta";
         options[8] = "Creitós";
         options[9] = "salir";
