@@ -3,7 +3,7 @@ package com.gingerbread.chemistry;
 import java.util.Scanner;
 
 public class Topic_1 {
-    public static void Topic(Scanner scanner) {
+    public static Topic Topic() {
         Topic topic = new Topic();
         topic.setName("1.1 El átomo y sus partículas subatómicas");
         topic.setDescription("""
@@ -30,6 +30,6 @@ public class Topic_1 {
                 Debido a esa capacidad, se les suele denominar radiaciones ionizantes.
                 Las radiaciones emitidas pueden ser electromagnéticas, en forma de rayos X o rayos gamma, como pueden ser núcleos de helio, electrones, protones u otras. Fenómeno que ocurre en los núcleos de ciertos elementos, inestables, que son capaces de transformarse, o decaer, espontáneamente, en núcleos atómicos de otros elementos más estables. La radiactividad ioniza el medio que atraviesa. Una excepción lo constituye el neutrón, que no posee carga, pero ioniza la materia en forma indirecta. En las desintegraciones radiactivas se tienen varios tipos de radiación: alfa, beta, gamma y neutrones."""
         ));
-        topic.menu(scanner);
+        return topic;
     }
 }

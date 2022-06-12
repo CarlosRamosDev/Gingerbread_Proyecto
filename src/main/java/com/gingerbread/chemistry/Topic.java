@@ -72,7 +72,7 @@ public class Topic {
         if (subtopics != null) {
             boolean exit = false;
             do {
-                System.out.println("\nOpciones:");
+                System.out.println("\nSubtemas:");
                 for (int i = 0; i < subtopics.size(); i++) {
                     System.out.println((i + 1) + ") " + subtopics.get(i).getName());
                     if (i == subtopics.size() - 1) {
@@ -80,13 +80,10 @@ public class Topic {
                     }
                 }
                 try {
-                    System.out.print("Seleccione una opción: ");
+                    System.out.print("Seleccione un subtema o salir: ");
                     int option = scanner.nextInt();
                     if (option > 0 && option <= subtopics.size()) {
                         subtopics.get(option - 1).menu(scanner);
-                        System.out.print("Presione enter para continuar...");
-                        scanner.nextLine();
-                        scanner.nextLine();
                     } if (subtopics.size() + 1 == option) {
                         exit = true;
                     }

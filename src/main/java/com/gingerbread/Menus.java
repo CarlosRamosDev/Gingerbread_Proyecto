@@ -14,7 +14,7 @@ public class Menus {
         Menu menu = new Menu();
         menu.setTitle("Menu principal");
         String[] options = new String[10];
-        options[1] = "opción 1";
+        options[1] = "Información";
         options[2] = "opción 2";
         options[3] = "opción 3";
         options[4] = "opción 4";
