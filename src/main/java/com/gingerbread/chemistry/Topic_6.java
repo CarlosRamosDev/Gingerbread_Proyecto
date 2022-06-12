@@ -1,27 +1,10 @@
 package com.gingerbread.chemistry;
 
 public class Topic_6 {
-
-    private String topic1_6;
-
-    public Topic_6() {
-    }
-
-    public Topic_6(String topic1_6) {
-        this.topic1_6 = topic1_6;
-    }
-
-    public String getTopic1_6() {
-        return topic1_6;
-    }
-
-    public void setTopic1_6(String topic1_6) {
-        this.topic1_6 = topic1_6;
-    }
-
-    public void imprimirTema1_6() {
-        topic1_6 = """
-                1.6 Aplicaciones tecnológicas de la emisión electrónica de los átomos
+    public static Topic Topic() {
+        Topic topic = new Topic();
+        topic.setName("1.6 Aplicaciones tecnológicas de la emisión electrónica de los átomos");
+        topic.setDescription("""
                 El átomo es la expresión más pequeña de la materia y a partir de ella se han logrado hacer diversas investigaciones y de esa manera se han hecho grandes descubrimientos acerca de este, utilizándolos se han logrado grandes avances en la ciencia y la tecnología.
                 En el desarrollo tecnológico la emisión electrónica de los átomos puede ser de verdadera utilidad como podremos comprobar a lo largo de este ensayo tiene muy diversas utilidades y, sabiendo utilizarlas correctamente podemos obtener diversos beneficios.
                 Para poder realizar estos adelantos fue necesario realizar las investigaciones adecuadas, por lo tanto, hay que recordar que la base de todos estos fue planteada por científicos y posteriormente desarrollada en caso de no haber sido concluidos.
@@ -33,7 +16,8 @@ public class Topic_6 {
                 La elaboración de materiales. La irradiación provoca, en determinadas condiciones, reacciones químicas que permiten la elaboración de materiales más ligeros y más resistentes, como aislantes, cables eléctricos, envolventes termo-retractables, prótesis, etc.
                 Los detectores de incendio. Una pequeña fuente radioactiva ioniza los átomos de oxígeno y de nitrógeno contenidos en un volumen reducido de aire. La llegada de partículas de humo modifica esta ionización Por esta razón se realizan y se utilizan en los comercios, fábricas, despachos…detectores radioactivos sensibles a cantidades de humo muy pequeñas.
                 La alimentación de energía de los satélites. Las baterías eléctricas funcionan gracias a pequeñas fuentes radioactivas con plutonio 239, cobalto 60 o estroncio 90. Estas baterías se montan en los satélites para su alimentación energética. Son de tamaño muy reducido y pueden funcionar sin ninguna operación de mantenimiento durante años.
-                La producción de electricidad. Las reacciones en cadena de fisión del uranio se utilizan en las centrales nucleares que, en Francia, producen más del 75% de la electricidad.""";
-        System.out.println(topic1_6);
+                La producción de electricidad. Las reacciones en cadena de fisión del uranio se utilizan en las centrales nucleares que, en Francia, producen más del 75% de la electricidad."""
+        );
+        return topic;
     }
 }

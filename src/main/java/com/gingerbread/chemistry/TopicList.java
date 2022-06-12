@@ -8,6 +8,11 @@ public class TopicList {
         topic.setName("Temas de la materia");
         topic.setDescription("Selecciona un tema para ver más información");
         topic.addSubtopic(Topic_1.Topic());
+        //topic.addSubtopic(Topic_2.Topic());
+        topic.addSubtopic(Topic_3.Topic());
+        //topic.addSubtopic(Topic_4.Topic());
+        //topic.addSubtopic(Topic_5.Topic());
+        topic.addSubtopic(Topic_6.Topic());
         topic.menu(scanner);
         return topic;
     }
