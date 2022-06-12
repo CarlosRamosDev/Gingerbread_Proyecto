@@ -1,5 +1,7 @@
 package com.gingerbread.chemistry;
 
+import com.gingerbread.common.Topic;
+
 import java.util.Scanner;
 
 public class TopicList {

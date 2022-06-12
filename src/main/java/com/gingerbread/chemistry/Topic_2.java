@@ -1,5 +1,7 @@
 package com.gingerbread.chemistry;
 
+import com.gingerbread.common.Topic;
+
 public class Topic_2 {
     public static Topic Topic() {
         Topic topic = new Topic();

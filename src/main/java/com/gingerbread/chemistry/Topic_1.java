@@ -1,6 +1,6 @@
 package com.gingerbread.chemistry;
 
-import java.util.Scanner;
+import com.gingerbread.common.Topic;
 
 public class Topic_1 {
     public static Topic Topic() {

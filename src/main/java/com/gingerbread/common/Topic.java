@@ -1,4 +1,4 @@
-package com.gingerbread.chemistry;
+package com.gingerbread.common;
 
 import java.util.ArrayList;
 import java.util.Scanner;
