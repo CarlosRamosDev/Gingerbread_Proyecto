@@ -17,10 +17,12 @@ public class Topic {
     public Topic(String name, String description) {
         setName(name);
         setDescription(description);
+        setSubtopics(null);
     }
     public Topic() {
         setName("");
         setDescription("");
+        setSubtopics(null);
     }
 
     public String getName() {
@@ -69,19 +71,22 @@ public class Topic {
         System.out.println(description);
         if (subtopics != null) {
             boolean exit = false;
-            System.out.println("\nSubtemas: ");
-            for (int i = 0; i < subtopics.size(); i++) {
-                System.out.println((i + 1) + ") " + subtopics.get(i).getName());
-                if (i == subtopics.size() - 1) {
-                    System.out.println((i + 1) + ") Salir");
-                }
-            }
             do {
+                System.out.println("\nOpciones:");
+                for (int i = 0; i < subtopics.size(); i++) {
+                    System.out.println((i + 1) + ") " + subtopics.get(i).getName());
+                    if (i == subtopics.size() - 1) {
+                        System.out.println((i + 2) + ") Salir");
+                    }
+                }
                 try {
-                    System.out.println("Seleccione una opción: ");
+                    System.out.print("Seleccione una opción: ");
                     int option = scanner.nextInt();
                     if (option > 0 && option <= subtopics.size()) {
                         subtopics.get(option - 1).menu(scanner);
+                        System.out.print("Presione enter para continuar...");
+                        scanner.nextLine();
+                        scanner.nextLine();
                     } if (subtopics.size() + 1 == option) {
                         exit = true;
                     }
@@ -89,6 +94,7 @@ public class Topic {
                     System.out.println("Opción inválida");
                 }
             } while (!exit);
+            scanner.nextLine();
         }
     }
 }
