@@ -17,6 +17,7 @@ public class Menu implements com.gingerbread.common.interfaces.Menu {
         this.pauseByEnter = 0;
     }
 
+    @SuppressWarnings("unused")
     public Menu(String title, String[] options, String bottomText, int pauseByEnter) {
         this.title = title;
         this.options = options;
@@ -74,7 +75,7 @@ public class Menu implements com.gingerbread.common.interfaces.Menu {
                 }
             }
         }
-        logs.newLog("Menus/INFO", "Se imprimio el menu: " + this.title);
+        logs.newLog("Menus/INFO", "Se imprimió el menu: " + this.title);
         System.out.print(this.bottomText);
         option = scanner.nextLine();
         if (this.pauseByEnter != 0) {

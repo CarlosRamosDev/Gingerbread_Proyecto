@@ -9,6 +9,7 @@ public class User implements com.gingerbread.common.interfaces.User, Serializabl
     private UUID id;
     private int role;
 
+    @SuppressWarnings("unused")
     public User() {
         this.name = "";
         this.password = "";
@@ -23,6 +24,7 @@ public class User implements com.gingerbread.common.interfaces.User, Serializabl
         this.role = 1;
     }
 
+    @SuppressWarnings("unused")
     public User(String name, String password, UUID id) {
         this.name = name;
         this.password = password;

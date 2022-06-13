@@ -38,7 +38,7 @@ public class Topic_5 {
         topic.addSubtopic(new Topic("1.5.4 Configuración electrónica de los elementos y su ubicación en la clasificación periódica", """
                 La configuración electrónica (o periódica) estamos es la descripción de la ubicación de los electrones en los distintos niveles (con subniveles y orbitales) de un determinado átomo.\s
                 Configurar significa "ordenar" o "acomodar", y electrónico deriva de "electrón"; así, configuración electrónica es la manera ordenada de repartir los electrones en los niveles y subniveles de energía.\s
-                Es la representación del modelo atómico de Schrödinger o modelo de la mecánica cuántica.
+                Es la representación del modelo atómico de Schrodinger o modelo de la mecánica cuántica.
                 Tipos de configuración electrónica Para graficar la configuración electrónica existen cuatro modalidades, con mayor o menor complejidad de comprensión, que son:
                 Configuración estándar Se representa la configuración electrónica que se obtiene usando la regla de las diagonales. Es importante recordar que los orbitales se van llenando en el orden en que aparecen, siguiendo esas diagonales, empezando siempre por el 1s. Imagen 66. Aplicando la regla de las diagonales, la configuración electrónica para cualquier átomo, quedara como la siguiente representación dependiendo del elemento y su número atómico."""
         ));

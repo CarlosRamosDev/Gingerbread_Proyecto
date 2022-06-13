@@ -1,19 +1,19 @@
 package com.gingerbread.common.interfaces;
 
 public interface Menu {
-    public String getTitle();
+    String getTitle();
 
-    public void setTitle(String title);
+    void setTitle(String title);
 
-    public String[] getOptions();
+    String[] getOptions();
 
-    public void setOptions(String[] options);
+    void setOptions(String[] options);
 
-    public String getBottomText();
+    String getBottomText();
 
-    public void setBottomText(String bottomText);
+    void setBottomText(String bottomText);
 
-    public int getPauseByEnter();
+    int getPauseByEnter();
 
-    public void setPauseByEnter(int pauseByEnter);
+    void setPauseByEnter(int pauseByEnter);
 }

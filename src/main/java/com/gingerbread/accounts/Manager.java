@@ -2,11 +2,11 @@ package com.gingerbread.accounts;
 
 import com.gingerbread.common.Logs;
 
+import java.util.Objects;
 import java.util.Scanner;
 import java.util.UUID;
 
 public class Manager {
-    private static Logs logs;
 
     public static UUID signUpMenu(Scanner scanner, Logs logs) {
         UUID id = null;
@@ -59,6 +59,6 @@ public class Manager {
     }
 
     public static void welcome(UUID id) {
-        System.out.println("Bienvenido " + Access.getUser(id).getName());
+        System.out.println("Bienvenido " + Objects.requireNonNull(Access.getUser(id)).getName());
     }
 }

@@ -1,8 +1,8 @@
 package com.gingerbread.chemistry;
 
 public class Formulas {
-    //TEORIA ONDULATORIA DE LA LUZ
-    //Logitud de onda
+    //TEORÍA ONDULATORIA DE LA LUZ
+    //Longitud de onda
     public static double longDeOnda (double f1){
         double longOnda;
         double c = 300000000.00;
@@ -12,23 +12,23 @@ public class Formulas {
 
     //Frecuencia en Hz
     public static double frecuencia (double l){
-        double frecu;
+        double frecuencia;
         double c = 300000000.00;
-        frecu = (c/l);
-        return frecu;
+        frecuencia = (c/l);
+        return frecuencia;
     }
 
     //ENERGÍA CUANTIZADA Y FOTONES
     //Energía emitida de la radiación electromagnética
-    public static double energia (double f2){
-        double energia;
+    public static double energy(double f2){
+        double energy;
         double h=0.0000000000000000000000000000000006626;
-        energia = h*f2;
-        return energia;
+        energy = h*f2;
+        return energy;
     }
 
-    //Frecuencia energia
-    public static double frecuenciaEnergia (double e){
+    //Frecuencia energía
+    public static double frequencyEnergy(double e){
         double frecuenciaE;
         double h=0.0000000000000000000000000000000006626;
         frecuenciaE = e/h;
@@ -37,11 +37,11 @@ public class Formulas {
 
     //Modelo de Bohr
     //Energía por Bohr
-    public static double energiaBohr (double ni, double nf){
-        double resta, energiaB;
+    public static double energyByBohr(double ni, double nf){
+        double resta, energyByBohr;
         double rh= 0.00000000000000000218;
         resta = (1/Math.pow(ni, 2)) - ( 1/Math.pow(nf, 2));
-        energiaB = rh*resta;
-        return energiaB;
+        energyByBohr = rh*resta;
+        return energyByBohr;
     }
 }

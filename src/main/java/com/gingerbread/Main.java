@@ -44,8 +44,8 @@ public class Main {
                     case 3 -> {
                         try {
                             System.out.print("Ingresa la longitud: ");
-                            double frec = Formulas.frecuencia(scanner.nextDouble());
-                            System.out.println("La frecuencia es: " + frec);
+                            double frecuencia = Formulas.frecuencia(scanner.nextDouble());
+                            System.out.println("La frecuencia es: " + frecuencia);
                         } catch (Exception e) {
                             System.out.println("Ingrese una longitud de onda válida");
                         }
@@ -54,8 +54,8 @@ public class Main {
                     case 4 -> {
                         try {
                             System.out.print("Ingresa la frecuencia : ");
-                            double energ = Formulas.energia(scanner.nextDouble());
-                            System.out.println("La energia es: " + energ);
+                            double energy = Formulas.energy(scanner.nextDouble());
+                            System.out.println("La energía es: " + energy);
                         } catch (Exception e) {
                             System.out.println("Ingrese una frecuencia válida");
                         }
@@ -63,9 +63,9 @@ public class Main {
                     }
                     case 5 -> {
                         try {
-                            System.out.print("Ingresa la energia: ");
-                            double frec2 = Formulas.frecuenciaEnergia(scanner.nextDouble());
-                            System.out.println("La frecuencia es: " + frec2);
+                            System.out.print("Ingresa la energía: ");
+                            double frecuencia = Formulas.frequencyEnergy(scanner.nextDouble());
+                            System.out.println("La frecuencia es: " + frecuencia);
                         } catch (Exception e) {
                             System.out.println("Ingrese una energía válida");
                         }
@@ -77,8 +77,8 @@ public class Main {
                             double ni = scanner.nextDouble();
                             System.out.print("Ingresa nf: ");
                             double nf = scanner.nextDouble();
-                            double eneB = Formulas.energiaBohr(ni, nf);
-                            System.out.println("La energia es: " + eneB);
+                            double eneB = Formulas.energyByBohr(ni, nf);
+                            System.out.println("La energía es: " + eneB);
                         } catch (Exception e) {
                             System.out.println("Ingrese una longitud de onda válida");
                         }

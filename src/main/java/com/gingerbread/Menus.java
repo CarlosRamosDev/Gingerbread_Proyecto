@@ -4,6 +4,7 @@ import com.gingerbread.accounts.Access;
 import com.gingerbread.common.Logs;
 import com.gingerbread.common.menus.Menu;
 
+import java.util.Objects;
 import java.util.Scanner;
 import java.util.UUID;
 
@@ -21,7 +22,7 @@ public class Menus {
         options[5] = "Calcular frecuencia utilizando la energía";
         options[6] = "Calcular energía utilizando el modelo de Bhor";
         options[7] = "Administrador de Cuenta";
-        options[8] = "Creitós";
+        options[8] = "Créditos";
         options[9] = "salir";
         menu.setOptions(options);
         menu.setBottomText("Selecciona una opción: ");
@@ -89,7 +90,7 @@ public class Menus {
     public static boolean getAccountMenu(Scanner scanner, UUID userId, Logs logs) {
         boolean exit = false;
         do {
-            if (Access.getUser(userId).getRole() == 0) {
+            if (Objects.requireNonNull(Access.getUser(userId)).getRole() == 0) {
                 switch (Integer.parseInt(getAdminMenu().printMenu(scanner, logs))) {
                     case 1 -> {
                         Access.showUsers();

@@ -8,6 +8,7 @@ public class Topic {
     private String description;
     private ArrayList<Topic> subtopics;
 
+    @SuppressWarnings("unused")
     public Topic(String name, String description, String[] options, ArrayList<Topic> subtopics) {
         setName(name);
         setDescription(description);
@@ -33,16 +34,8 @@ public class Topic {
         this.name = name;
     }
 
-    public ArrayList<Topic> getSubtopics() {
-        return subtopics;
-    }
-
     public void setSubtopics(ArrayList<Topic> subtopics) {
         this.subtopics = subtopics;
-    }
-
-    public String getDescription() {
-        return description;
     }
 
     public void setDescription(String description) {
@@ -54,16 +47,6 @@ public class Topic {
             subtopics = new ArrayList<>();
         }
         subtopics.add(subtopic);
-    }
-
-    public void print() {
-        System.out.println(name);
-        System.out.println(description);
-        if (subtopics != null) {
-            for (Topic subtopic : subtopics) {
-                System.out.println("\t" + subtopic.getName());
-            }
-        }
     }
 
     public void menu(Scanner scanner) {

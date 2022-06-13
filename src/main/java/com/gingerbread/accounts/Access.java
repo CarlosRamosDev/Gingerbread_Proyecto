@@ -159,10 +159,3 @@ class userExistsException extends Exception {
         super("El usuario ya existe");
     }
 }
-
-class userNotFoundException extends Exception {
-    public userNotFoundException() {
-        super("El usuario no existe");
-    }
-}
-
