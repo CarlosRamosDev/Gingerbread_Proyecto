@@ -89,6 +89,7 @@ public class Topic {
                     }
                 } catch (Exception e) {
                     System.out.println("Opción inválida");
+                    scanner.nextLine();
                 }
             } while (!exit);
             scanner.nextLine();
